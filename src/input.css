@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background-color: #F0EBE1; }
+}
+
+@layer components {
+  .timeline-dot {
+    @apply absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ink border-2 border-cream ring-2 ring-ink;
+  }
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-ink-muted mb-3 block;
+  }
+  .section-heading {
+    @apply font-display text-4xl text-ink mb-3 leading-tight;
+  }
+  .divider {
+    @apply border-t border-ink/10 my-16;
+  }
+  .nav-link {
+    @apply text-xs tracking-[0.15em] uppercase text-ink-muted hover:text-ink transition-colors;
+  }
+  .form-input {
+    @apply w-full px-4 py-3 bg-cream-dark border border-ink/10 rounded-none
+           text-ink placeholder-ink-muted text-sm
+           focus:outline-none focus:border-ink transition-colors;
+  }
+}
