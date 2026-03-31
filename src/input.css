@@ -7,6 +7,16 @@
   body { background-color: #F0EBE1; }
 }
 
+/* Hide the display title until Bodoni Moda is confirmed loaded,
+   then fade it in. Avoids any FOUT on the headline. */
+h1.font-display {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.fonts-ready h1.font-display {
+  opacity: 1;
+}
+
 @layer components {
   .timeline-dot {
     @apply absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ink border-2 border-cream ring-2 ring-ink;
